@@ -21,7 +21,7 @@ z = X * theta;
 g = sigmoid(z);
 j = -y .* log(g) - (1-y).*log(1-g);
 
-J =  sum(j)/m + (lambda/(2*m))*(sum(theta));
+J =  sum(j)/m + (lambda/(2*m))*(sum(theta(2:size(theta),:).*theta(2:size(theta))));
 
 
 k = (g-y);
